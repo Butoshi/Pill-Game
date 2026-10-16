@@ -3897,6 +3897,7 @@
     const hhmm = (t) => { const d = new Date(t); return pad(d.getUTCHours()) + ':' + pad(d.getUTCMinutes()); };
     const mmdd = (t) => { const d = new Date(t); return pad(d.getUTCMonth() + 1) + '/' + pad(d.getUTCDate()); };
     const win = (t) => { const start = Math.floor(t / MS) * MS; return { start, end: start + MS }; };
+    const FIRST_PAID = (() => { const d = new Date(Date.UTC(2026, 9, 16, 19, 30)); return pad(d.getHours()) + ':' + pad(d.getMinutes()) + ' YOUR TIME'; })();   // launch night: 19:30 UTC shown in the viewer's local time
     const live = () => rewardsOn || !!(cur && cur.prizes_live);   // v13: the server decides (rewards_active / prizes_live), no CA needed on the page
     const nm = (n) => esc(n || '???');
     async function get(path){
@@ -3946,9 +3947,9 @@
       if (!bar) return;
       const on = live(), p = prize(), amt = $('pzAmt'), lead = $('pzLead'), cta = $('pzWallet');
       amt.classList.toggle('pre', !on);
-      if (!on) amt.innerHTML = '<span class="v">PRIZES START AT LAUNCH</span><span class="to">rounds every 30 min</span>';
+      if (!on) amt.innerHTML = '<span class="v">FIRST PAID ROUND ' + esc(FIRST_PAID) + '</span><span class="to">then every 30 min</span>';
       else if (p) amt.innerHTML = '<span class="k">PRIZE</span><span class="v">' + esc(sol(p)) + ' SOL</span><span class="to">&rarr; TOP 1</span>';
-      else amt.innerHTML = '<span class="k">PRIZE</span><span class="v">TBA</span><span class="to">&rarr; TOP 1 WITH A WALLET</span>';
+      else amt.innerHTML = '<span class="k">PRIZE</span><span class="v">PAID IN SOL</span><span class="to">&rarr; TOP 1 WITH A WALLET</span>';
       amt.setAttribute('aria-label', on ? (p ? 'prize ' + sol(p) + ' sol to the top run of this round. rules' : 'rewards are live. rules') : 'prizes start at launch. rules');
       lead.classList.remove('me');
       if (down && !cur) lead.textContent = "round board's offline. runs still count.";
@@ -4001,7 +4002,7 @@
         if (you(e || t)) lead.classList.add('me');
       }
       const on = live();
-      state.textContent = on ? (prize() ? 'LIVE. PRIZE ' + sol(prize()) + ' SOL. TOP RUN WITH A WALLET TAKES IT' : 'LIVE. TOP RUN WITH A WALLET GETS PAID') : 'REWARDS START AT LAUNCH';
+      state.textContent = on ? (prize() ? 'LIVE. PRIZE ' + sol(prize()) + ' SOL. TOP RUN WITH A WALLET TAKES IT' : 'LIVE. TOP RUN WITH A WALLET GETS PAID') : 'FIRST PAID ROUND: ' + FIRST_PAID;
       state.classList.toggle('live', on);
       $('rwState').textContent = on ? 'live. this round ends in ' + $('rdClock').textContent + '.' : 'rounds are running. rewards start at launch.';
       cta.hidden = !!playerWallet;
