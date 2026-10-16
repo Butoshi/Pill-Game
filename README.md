@@ -2,7 +2,7 @@
 
 tap to pump the pill. dodge the red candles. every candle asks one question: pill or rug?
 
-play: https://butoshi.github.io/Pill-Game/
+play: https://pillorrug.lol/
 
 - 100% client side game (index.html + sim.js)
 - shared leaderboard: every score is replayed and checked by the server before it counts

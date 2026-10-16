@@ -14,13 +14,13 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Pill or Rug">
-  <link rel="canonical" href="https://butoshi.github.io/Pill-Game/">
+  <link rel="canonical" href="https://pillorrug.lol/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Pill or Rug">
   <meta property="og:title" content="Pill or Rug">
   <meta property="og:description" content="tap to pump. dodge the rug. a free pixel arcade game from the solana trenches. no wallet, runs in your browser.">
-  <meta property="og:url" content="https://butoshi.github.io/Pill-Game/">
-  <meta property="og:image" content="https://butoshi.github.io/Pill-Game/brand/og.png">
+  <meta property="og:url" content="https://pillorrug.lol/">
+  <meta property="og:image" content="https://pillorrug.lol/brand/og.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -28,8 +28,8 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Pill or Rug">
   <meta name="twitter:description" content="tap to pump. dodge red candles. graduate the curve.">
-  <meta name="twitter:image" content="https://butoshi.github.io/Pill-Game/brand/og.png">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"VideoGame","name":"Pill or Rug","url":"https://butoshi.github.io/Pill-Game/","description":"a free pixel arcade game. tap to pump, dodge red candles, graduate the curve.","genre":"Arcade","playMode":"SinglePlayer","applicationCategory":"Game","operatingSystem":"Web browser","image":"https://butoshi.github.io/Pill-Game/brand/og.png","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <meta name="twitter:image" content="https://pillorrug.lol/brand/og.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"VideoGame","name":"Pill or Rug","url":"https://pillorrug.lol/","description":"a free pixel arcade game. tap to pump, dodge red candles, graduate the curve.","genre":"Arcade","playMode":"SinglePlayer","applicationCategory":"Game","operatingSystem":"Web browser","image":"https://pillorrug.lol/brand/og.png","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
   <!-- Pixel fonts for the page only (SIL Open Font License). The game canvas uses its own bitmap font. -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -4235,7 +4235,7 @@
     const head = 'pill or rug \u00b7 ' + (daily ? 'daily #' + run.dayN : run.boss ? 'beat the dev' : 'free run');
     const rk = run.rank ? '#' + run.rank + (run.board === 'daily' ? ' today' : ' all time') : '';
     const l3 = [rk, 'held ' + fmtTime(run.frames)].filter(Boolean).join(' \u00b7 ');
-    return head + '\n' + sq + '  ' + fmtMC(run.score) + '\n' + l3 + '\nbutoshi.github.io/Pill-Game' + (daily ? '/?daily=' + run.dayN : '');
+    return head + '\n' + sq + '  ' + fmtMC(run.score) + '\n' + l3 + '\npillorrug.lol' + (daily ? '/?daily=' + run.dayN : '');
   }
   function isPublicHost(){ return /^https?:/.test(location.protocol) && !/^(localhost|127\.|0\.0\.0\.0|\[::1\])/.test(location.hostname); }
   // challenge link: same seed + your taps (short varint string) so they race your ghost. falls back to seed + score.
