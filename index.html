@@ -349,7 +349,7 @@
     table.hs{width:100%;border-collapse:collapse;font-family:var(--term);font-size:24px;table-layout:fixed}
     table.hs td{padding:3px 6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--muted)}
     table.hs td.r{font-family:var(--ui);font-size:12px;width:46px}
-    table.hs td.n{font-family:var(--px);font-size:12px;letter-spacing:2px;color:var(--body);width:64px}
+    table.hs td.n{font-family:var(--px);font-size:10px;letter-spacing:0;color:var(--body)}
     table.hs td.w{color:var(--dim);font-size:20px}
     table.hs td.s{text-align:right;color:var(--gold);width:84px}
     table.hs tr.g1{background:linear-gradient(90deg,rgba(255,210,63,.22),rgba(255,210,63,.03))}
@@ -369,6 +369,28 @@
     .hs-open{margin:10px 0 0;padding:8px;border:2px dashed var(--line-hi);text-align:center;font-family:var(--ui);font-size:12px;color:var(--green);letter-spacing:1px;line-height:1.4}
     .hs-open.empty{font-family:var(--term);font-size:20px;color:var(--body);letter-spacing:0}
     .hof .note{font-size:20px;text-align:center}
+    .rp{grid-column:1/-1;border-color:var(--ink);box-shadow:0 0 0 2px var(--green-d),0 0 28px rgba(46,232,138,.16)}
+    .rp .hof-head h2{background:linear-gradient(var(--green-l),var(--green) 55%,var(--green-d));-webkit-background-clip:text;background-clip:text}
+    .rp-big{text-align:center;margin:4px 0 8px}
+    .rp-amt{display:block;font-family:var(--px);font-size:22px;line-height:1.3;color:var(--gold);text-shadow:3px 3px 0 var(--ink),0 0 14px rgba(255,210,63,.45)}
+    .rp-to{display:block;font-family:var(--ui);font-size:12px;color:var(--text);letter-spacing:2px;margin-top:4px}
+    .rp-clock{display:flex;flex-wrap:wrap;justify-content:center;column-gap:12px;row-gap:2px;margin:0 0 8px;font-family:var(--ui);font-size:11px;color:var(--muted);letter-spacing:1px}
+    .rp-clock b{font-family:var(--px);font-size:11px;color:var(--text);font-weight:400;font-variant-numeric:tabular-nums}
+    .rp-clock b.soon{color:var(--red-l)}
+    table.rp-t{font-size:20px}
+    table.rp-t td.r{width:42px;font-size:10px}
+    table.rp-t td.s{width:66px}
+    table.rp-t tr.nw td.n{color:var(--dim);text-decoration:line-through}
+    .rp-leg{margin:4px 0 0;font-family:var(--ui);font-size:10px;color:var(--dim);text-align:center;letter-spacing:1px}
+    .rp-cta{display:block;width:100%;margin:10px 0 0;font-size:11px}
+    .rp-ok{margin:10px 0 0;text-align:center;font-family:var(--ui);font-size:12px;color:var(--green);letter-spacing:1px}
+    .rp-h{margin:14px 0 6px;font-family:var(--ui);font-size:12px;font-weight:700;color:var(--gold);letter-spacing:2px;text-align:center}
+    .rp-win{list-style:none;margin:0;padding:0;font-family:var(--term);font-size:20px;color:var(--body)}
+    .rp-win li{display:flex;justify-content:space-between;gap:6px;padding:2px 4px;border-bottom:1px dashed var(--line)}
+    .rp-win li b{color:var(--gold);font-weight:400}
+    .rp-win li.e{justify-content:center;color:var(--green);border:2px dashed var(--line-hi);padding:6px}
+    .rp-win a{color:var(--cyan)}
+    .rp-rules{display:block;margin-top:10px;text-align:center;font-family:var(--ui);font-size:11px;letter-spacing:1px}
     .me-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;margin:8px 0 0;font-family:var(--ui);font-size:12px;color:var(--muted)}
     .me-row b{color:var(--green);font-family:var(--px);font-size:11px;font-weight:400;letter-spacing:2px}
     .tg-link{margin:8px 0 0;font-family:var(--ui);font-size:12px;color:var(--muted);line-height:1.5;text-align:center}
@@ -440,9 +462,9 @@
     .claim-wallet small{font-size:20px;color:var(--muted)}
     .claim-status{flex-basis:100%;margin:0;font-size:20px;color:var(--muted);min-height:20px}
     .claim-x{position:absolute;top:6px;right:6px;width:44px;height:44px;font-family:var(--ui);font-weight:700;font-size:12px;background:var(--bg2);color:var(--muted);border:2px solid var(--line);cursor:pointer}
-    input.initials{width:7.2em;font-family:var(--px);font-size:18px;letter-spacing:6px;text-transform:uppercase;text-align:center;background:var(--ink);color:var(--gold);border:3px solid var(--line);padding:8px 4px 8px 10px;min-height:48px}
+    input.initials{width:10em;font-family:var(--px);font-size:16px;letter-spacing:3px;text-transform:uppercase;text-align:center;background:var(--ink);color:var(--gold);border:3px solid var(--line);padding:8px 4px 8px 10px;min-height:48px}
     input.initials:focus{border-color:var(--gold);outline:none}
-    .modal input.initials{width:8em;font-size:22px}
+    .modal input.initials{width:10em;max-width:100%;font-size:18px}
 
     /* ===== bottom cards (cartridges) ===== */
     .info{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:28px}
@@ -692,6 +714,20 @@
   <main id="top">
     <div class="stage">
       <div class="lcol">
+      <!-- ROUND PRIZE (v14): what you win, when, who leads, who got paid -->
+      <aside class="hof rp" id="roundPrize" aria-labelledby="rpTitle" hidden>
+        <span class="tag live">EVERY 30 MIN</span>
+        <div class="hof-head"><h2 id="rpTitle">ROUND<br>PRIZE</h2><span class="sub">#1 OF THE ROUND GETS PAID IN SOL</span></div>
+        <div class="rp-big"><span class="rp-amt" id="rpAmt">SOL</span><span class="rp-to">TO THE TOP 1</span></div>
+        <p class="rp-clock"><span>ROUND <b id="rpLabel">--:--</b> UTC</span><span>ENDS IN <b id="rpClock">--:--</b></span></p>
+        <table class="hs rp-t" id="rpTable" aria-label="this round's leaders"></table>
+        <p class="rp-leg">crossed out = no wallet, can't be paid</p>
+        <button class="btn rp-cta" id="rpWallet" type="button" hidden>ADD WALLET TO WIN</button>
+        <p class="rp-ok" id="rpOk" hidden>WALLET SET. YOU'RE IN.</p>
+        <h3 class="rp-h">LAST WINNERS</h3>
+        <ul class="rp-win" id="rpWinners"><li class="e">first winner: this round.</li></ul>
+        <a class="rp-rules" href="#rewards">RULES + EVERY TX &rarr;</a>
+      </aside>
       <!-- HOW TO PLAY -->
       <aside class="panel how" id="howto">
         <h2>HOW TO PLAY</h2>
@@ -752,7 +788,7 @@
             <div class="claim-name" id="claimNameRow">
               <label for="claimInitials">PUT YOUR NAME ON THE BOARD</label>
               <div class="claim-form">
-                <input class="initials" id="claimInitials" type="text" maxlength="3" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="AAA" aria-describedby="claimStatus">
+                <input class="initials" id="claimInitials" type="text" maxlength="8" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="NAME" aria-describedby="claimStatus">
                 <button class="btn go" id="claimSave" type="button">SAVE</button>
               </div>
             </div>
@@ -760,7 +796,7 @@
               <button class="btn" id="claimWallet" type="button">ADD A WALLET (OPTIONAL)</button>
               <small>public address only. never your seed phrase.</small>
             </div>
-            <p class="claim-status" id="claimStatus" aria-live="polite">3 letters or numbers, arcade style.</p>
+            <p class="claim-status" id="claimStatus" aria-live="polite">3 to 8 letters or numbers.</p>
           </div>
         </div>
         <div class="cab-base" aria-hidden="true"></div>
@@ -778,7 +814,7 @@
         <p class="hs-open" id="hsOpen" hidden></p>
         <button class="btn hs-all" id="hsAll" type="button" hidden aria-haspopup="dialog">SEE ALL PLAYERS</button>
         <p class="note" id="hsNote">offline right now. showing this device. your runs still count here.</p>
-        <p class="me-row"><span>YOU: <b id="myInitials">???</b></span><button class="linkbtn" id="editInitials" type="button">SET INITIALS</button><button class="linkbtn" id="tgLinkBtn" type="button" hidden>LINK TG</button></p>
+        <p class="me-row"><span>YOU: <b id="myInitials">???</b></span><button class="linkbtn" id="editInitials" type="button">SET NAME</button><button class="linkbtn" id="tgLinkBtn" type="button" hidden>LINK TG</button></p>
         <p class="tg-link" id="tgLinkNote" aria-live="polite" hidden></p>
         <div class="round" id="roundBox" hidden>
           <div class="round-head"><span title="rounds run on UTC time">ROUND <b id="rdLabel">--:--</b></span><span class="round-clock" id="rdClock" title="time left in this round">--:--</span></div>
@@ -911,12 +947,12 @@
     </div>
   </div>
 
-  <!-- ===== INITIALS (3 chars, arcade style) ===== -->
+  <!-- ===== NAME (3 to 8 chars) ===== -->
   <div id="nameModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="nameTitle">
     <div class="modal-box" style="max-width:420px">
-      <div class="modal-head"><h2 id="nameTitle">YOUR INITIALS</h2><button class="modal-x" type="button" data-close="nameModal" aria-label="close">X</button></div>
-      <label for="nameInput">3 LETTERS OR NUMBERS</label>
-      <input class="initials" type="text" id="nameInput" maxlength="3" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="AAA" />
+      <div class="modal-head"><h2 id="nameTitle">YOUR NAME</h2><button class="modal-x" type="button" data-close="nameModal" aria-label="close">X</button></div>
+      <label for="nameInput">3 TO 8 LETTERS OR NUMBERS</label>
+      <input class="initials" type="text" id="nameInput" maxlength="8" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="NAME" />
       <div class="status" id="nameStatus">shows next to your scores on the board. saved on this device.</div>
       <div class="row">
         <button class="btn go" id="saveNameBtn" type="button">SAVE</button>
@@ -3013,7 +3049,7 @@
   }
   setDailyDay(SIM.dayKey());
   function dayKeyOf(n){ return SIM.dayKey(new Date(Date.UTC(2026, 0, 1) + (n - 1) * 86400000)); }
-  function cleanTag(v){ const c = String(v || '').toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 3); return c.length === 3 && cleanInitials(c) ? c : ''; }
+  function cleanTag(v){ const c = String(v || '').toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 8); return c.length >= 3 && cleanInitials(c) ? c : ''; }
   function loadJSON(k){ try { const v = JSON.parse(store.get(k, 'null')); return v && typeof v === 'object' ? v : null; } catch(e){ return null; } }
   function bestRun(){ const b = loadJSON('pill_best_run_v3'); return b && b.sim === SIM.SIM_VERSION && typeof b.g === 'string' && b.g.length ? b : null; }
   function dailyBest(){ const d = loadJSON('pill_daily_v3'); return d && d.day === DAILY.key && d.sim === SIM.SIM_VERSION ? d : null; }
@@ -3299,7 +3335,7 @@
     V.death = { t0: NOW, x: pillPxX(), y: s.y / PX, vx: 0.35, vy: -2.4, rot: 0, landed: false, bounced: false, stamped: false,
       run, pnl: pnlOf(run), isBest, cause: s.cause || 'REKT', rank: rankFor(run), quip: s.ctoFailed ? 'NO CTO. DEAD COIN.' : pickQuip(rankFor(run)), ctxTag, ctxLine,
       tip: totalGames <= 3 && /^FLEW TOO CLOSE/.test(s.cause || '') ? 'TAP LESS. ONE TAP = ONE JUMP.' : '',
-      worth: isBest || ctxLine === 'NEW DAILY BEST' || !!run.boss || /MOGGED (THEM|[A-Z0-9]{3})$/.test(ctxLine) && !/MOGS YOU/.test(ctxLine) };
+      worth: isBest || ctxLine === 'NEW DAILY BEST' || !!run.boss || /MOGGED (THEM|[A-Z0-9]{3,8})$/.test(ctxLine) && !/MOGS YOU/.test(ctxLine) };
     V.endSel = 0; V.ticker = null; V.banner = null; V.lane = null; V.laneQ = []; V.money = null;
     V.whiteUntil = NOW + 40;
     V.flash = RM ? 0 : 1;
@@ -3879,7 +3915,7 @@
       listAt = Date.now();
       try { const b = await get('/rounds?limit=20'); list = b.rounds || []; rewardsOn = !!b.rewards_active; } catch(e){ /* keep the last list */ }
       try { stats = await get('/rewards/stats'); } catch(e){ /* keep the last stats */ }
-      renderPayouts(); renderPaid();
+      renderPayouts(); renderPaid(); renderPanel();
     }
     // v12 helpers: the round on screen, its announced prize (only when live), "is that run mine"
     const curId = () => new Date(win(Date.now()).start).toISOString().slice(0, 16);
@@ -3903,6 +3939,7 @@
         $('pzLabel').textContent = hhmm(w.start);
         const pc = $('pzClock'); pc.textContent = c.textContent; pc.classList.toggle('soon', left < 60000);
       }
+      if ($('rpClock')) { $('rpLabel').textContent = hhmm(w.start); const rc = $('rpClock'); rc.textContent = c.textContent; rc.classList.toggle('soon', left < 60000); }
     }
     // PRIZE banner above the game: round + countdown, prize (or "starts at launch"), live leader, wallet button
     function renderBar(){
@@ -3971,6 +4008,7 @@
       cta.textContent = 'ADD YOUR WALLET TO BE ELIGIBLE';
       renderBar(); renderPaid();
       renderPayouts();
+      renderPanel();
       try { window.dispatchEvent(new Event('pill:round')); } catch(e){}
     }
     function renderPayouts(){
@@ -3986,6 +4024,28 @@
           '<td class="' + (r.status === 'paid' ? '' : 'p') + '">' + sol + '</td><td>' + tx + '</td></tr>';
       }).join('');
     }
+    // ROUND PRIZE panel (v14): prize, countdown, this round's top 3 (wallet or not), last paid winners
+    function renderPanel(){
+      const pn = $('roundPrize'); if (!pn || pn.hidden) return;
+      const p = prize();
+      $('rpAmt').textContent = p ? sol(p) + ' SOL' : 'SOL';
+      const t = $('rpTable'), mine = new Set(myRuns());
+      const top = (curOk() && cur.top) ? cur.top.slice(0, 3) : [];
+      let h = '';
+      for (let i = 0; i < 3; i++) {
+        const r = top[i];
+        if (!r) { h += '<tr class="empty g' + (i + 1) + '"><td class="r">' + ['1ST','2ND','3RD'][i] + '</td><td class="n">???</td><td class="s">-----</td></tr>'; continue; }
+        const me = !!(r.rid && mine.has(r.rid));
+        h += '<tr class="g' + (i + 1) + (me ? ' me' : '') + (r.eligible ? '' : ' nw') + '" title="' + (r.eligible ? 'wallet set' : 'no wallet, can not be paid') + '"><td class="r">' + ['1ST','2ND','3RD'][i] + '</td><td class="n">' + (me ? 'YOU' : nm(r.name)) + '</td><td class="s">' + esc(fmtMC(r.score)) + '</td></tr>';
+      }
+      t.innerHTML = h;
+      $('rpWallet').hidden = !!playerWallet; $('rpOk').hidden = !playerWallet;
+      const paid = (list || []).filter(r => r && r.status === 'paid' && r.winner).slice(0, 5);
+      $('rpWinners').innerHTML = paid.length ? paid.map(r => {
+        const tx = r.tx && /^[1-9A-HJ-NP-Za-km-z]{64,88}$/.test(r.tx) ? ' <a href="https://solscan.io/tx/' + encodeURIComponent(r.tx) + '" target="_blank" rel="noopener">tx</a>' : '';
+        return '<li><span>' + esc(hhmm(r.start)) + ' ' + nm(r.winner.name) + '</span><span><b>' + esc(sol(r.amount_sol)) + ' SOL</b>' + tx + '</span></li>';
+      }).join('') : '<li class="e">first winner: this round.</li>';
+    }
     function tick(){
       if (document.hidden) return;
       renderClock();
@@ -3996,6 +4056,7 @@
       if (started) return; started = true;
       if (!SCORES || !api) { renderPayouts(); return; }   // no score server: rules text only
       box.hidden = false;
+      if ($('roundPrize')) { $('roundPrize').hidden = false; $('rpWallet').onclick = () => openWalletModal(); }
       if (bar) { bar.hidden = false; $('pzWallet').onclick = () => openWalletModal(); }
       $('rdWallet').onclick = () => openWalletModal();
       renderClock(); render(); loadRound(); loadList();
@@ -4059,14 +4120,14 @@
   // ---- 3-letter arcade initials (stored on this device, sent with each ranked run) ----
   function cleanInitials(v){
     if (window.PORScore && window.PORScore.cleanInitials) return window.PORScore.cleanInitials(v);
-    const c = String(v || '').toUpperCase().replace(/[^A-Z0-9]/g, '');
-    return c.length === 3 ? c : null;
+    const c = String(v || '').toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 8);
+    return c.length >= 3 ? c : null;
   }
   function myInitials(){ return cleanInitials(store.get('pill_player_name', '')); }
   let lastClaim = null;   // { runId, claim, named, at }: lets the first run get the initials typed after it was sent
   function saveInitials(raw, statusEl){
     const v = cleanInitials(raw);
-    if (!v) { statusEl.textContent = String(raw || '').replace(/[^A-Za-z0-9]/g, '').length === 3 ? 'pick something else. keep it clean.' : 'exactly 3 letters or numbers.'; statusEl.style.color = 'var(--red)'; return false; }
+    if (!v) { statusEl.textContent = String(raw || '').replace(/[^A-Za-z0-9]/g, '').length >= 3 ? 'pick something else. keep it clean.' : '3 to 8 letters or numbers.'; statusEl.style.color = 'var(--red)'; return false; }
     store.set('pill_player_name', v);
     statusEl.style.color = '';
     renderMyInitials();
@@ -4077,7 +4138,7 @@
     updateLeaderboardUI();
     return true;
   }
-  function renderMyInitials(){ const v = myInitials(); document.getElementById('myInitials').textContent = v || '???'; document.getElementById('editInitials').textContent = v ? 'EDIT' : 'SET INITIALS'; }
+  function renderMyInitials(){ const v = myInitials(); document.getElementById('myInitials').textContent = v || '???'; document.getElementById('editInitials').textContent = v ? 'EDIT' : 'SET NAME'; }
   function openNameModal(){
     const input = document.getElementById('nameInput'), st = document.getElementById('nameStatus');
     input.value = myInitials() || ''; st.textContent = 'shows next to your scores on the board. saved on this device.'; st.style.color = '';
@@ -4103,7 +4164,7 @@
     const n = claimNeeds();
     if (!n.name && !n.wallet) return;
     claimBar.hidden = false;
-    setClaimStatus(n.name ? '3 letters or numbers, arcade style.' : 'optional. only used for the board and, if prizes ever run, payouts.');
+    setClaimStatus(n.name ? '3 to 8 letters or numbers.' : 'optional. only used for the board and, if prizes ever run, payouts.');
     refreshClaimBar();
   }
   function hideClaimBar(){ claimBar.hidden = true; }
@@ -4113,8 +4174,8 @@
     if (saveInitials(document.getElementById('claimInitials').value, st)) { setClaimStatus('saved. you\'re ' + myInitials() + ' on the board now.'); refreshClaimBar(); }
   };
   document.getElementById('claimInitials').addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); document.getElementById('claimSave').click(); } });
-  document.getElementById('claimInitials').addEventListener('input', (e) => { const el = e.target, v = el.value.toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 3); if (el.value !== v) el.value = v; });
-  document.getElementById('nameInput').addEventListener('input', (e) => { const el = e.target, v = el.value.toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 3); if (el.value !== v) el.value = v; });
+  document.getElementById('claimInitials').addEventListener('input', (e) => { const el = e.target, v = el.value.toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 8); if (el.value !== v) el.value = v; });
+  document.getElementById('nameInput').addEventListener('input', (e) => { const el = e.target, v = el.value.toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 8); if (el.value !== v) el.value = v; });
   document.getElementById('nameInput').addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); saveNameModal(); } });
   document.getElementById('walletInput').addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); saveWallet(); } });
   document.getElementById('claimWallet').onclick = () => openWalletModal();

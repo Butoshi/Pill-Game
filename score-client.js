@@ -91,16 +91,20 @@
       .catch(function () { return { status: 'offline' }; });
   }
 
-  // 3-letter arcade initials. Same rules + list as the server (server/src/lib.js), the server has the last word.
+  // Player names: 3 to 8 chars. Same rules + lists as the server (server/src/lib.js), the server has the last word.
   var BLOCKED = ('ASS FUK FUC FCK FKU FUQ CUM CUN CNT COK DIK DIC DIX JIZ TIT SEX PUS VAG SHT ' +
     'FAG FGT NIG NGR NGA NGG KKK KYS HOE SLT WHR NAZ').split(' ');
+  var WORDS = ('FUCK FUK FCK FUC SHIT CUNT NIGG NIGA NIGR NGGR FAGG FAGOT COCK DICK PUSSY SLUT WHORE ' +
+    'RAPE HITLER NAZI PENIS BITCH KYS KKK JIZZ TITS VAGINA CUM ANAL').split(' ');
   var LEET = { '0': 'O', '1': 'I', '3': 'E', '4': 'A', '5': 'S', '7': 'T', '8': 'B' };
   function cleanInitials(n) {
     if (typeof n !== 'string') return null;
-    var c = n.toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 3);
-    if (c.length !== 3) return null;
+    var c = n.slice(0, 64).normalize('NFKC').toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 8);
+    if (c.length < 3) return null;
     var f = c.replace(/[0-9]/g, function (d) { return LEET[d] || d; });
-    return BLOCKED.indexOf(c) >= 0 || BLOCKED.indexOf(f) >= 0 ? null : c;
+    if (BLOCKED.indexOf(c) >= 0 || BLOCKED.indexOf(f) >= 0) return null;
+    for (var i = 0; i < WORDS.length; i++) if (c.indexOf(WORDS[i]) >= 0 || f.indexOf(WORDS[i]) >= 0) return null;
+    return c;
   }
 
   function claimName(runId, claim, name) {
