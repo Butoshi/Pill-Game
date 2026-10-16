@@ -3897,7 +3897,7 @@
     const hhmm = (t) => { const d = new Date(t); return pad(d.getUTCHours()) + ':' + pad(d.getUTCMinutes()); };
     const mmdd = (t) => { const d = new Date(t); return pad(d.getUTCMonth() + 1) + '/' + pad(d.getUTCDate()); };
     const win = (t) => { const start = Math.floor(t / MS) * MS; return { start, end: start + MS }; };
-    const FIRST_PAID = (() => { const d = new Date(Date.UTC(2026, 9, 16, 19, 30)); return pad(d.getHours()) + ':' + pad(d.getMinutes()) + ' YOUR TIME'; })();   // launch night: 19:30 UTC shown in the viewer's local time
+    const FIRST_PAID = (() => { const d = new Date(Date.UTC(2026, 9, 16, 20, 0)); return pad(d.getHours()) + ':' + pad(d.getMinutes()) + ' YOUR TIME'; })();   // launch night: 19:30 UTC shown in the viewer's local time
     const live = () => rewardsOn || !!(cur && cur.prizes_live);   // v13: the server decides (rewards_active / prizes_live), no CA needed on the page
     const nm = (n) => esc(n || '???');
     async function get(path){
