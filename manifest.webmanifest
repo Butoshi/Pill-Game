@@ -1,0 +1,19 @@
+{
+  "name": "Pill or Rug",
+  "short_name": "Pill or Rug",
+  "description": "tap to pump. dodge red candles. graduate the curve.",
+  "id": "./",
+  "start_url": "./?nointro=1&src=pwa",
+  "scope": "./",
+  "display": "fullscreen",
+  "display_override": ["fullscreen", "standalone"],
+  "orientation": "any",
+  "background_color": "#120f24",
+  "theme_color": "#120f24",
+  "categories": ["games"],
+  "icons": [
+    { "src": "brand/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "brand/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "brand/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
