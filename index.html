@@ -378,6 +378,7 @@
     .rp-clock b{font-family:var(--px);font-size:11px;color:var(--text);font-weight:400;font-variant-numeric:tabular-nums}
     .rp-clock b.soon{color:var(--red-l)}
     table.rp-t{font-size:20px}
+    #hsTable td.w{display:none}
     table.rp-t td.r{width:42px;font-size:10px}
     table.rp-t td.s{width:66px}
     table.rp-t tr.nw td.n{color:var(--dim);text-decoration:line-through}
@@ -3949,7 +3950,7 @@
       amt.classList.toggle('pre', !on);
       if (!on) amt.innerHTML = '<span class="v">FIRST PAID ROUND ' + esc(FIRST_PAID) + '</span><span class="to">then every 30 min</span>';
       else if (p) amt.innerHTML = '<span class="k">PRIZE</span><span class="v">' + esc(sol(p)) + ' SOL</span><span class="to">&rarr; TOP 1</span>';
-      else amt.innerHTML = '<span class="k">PRIZE</span><span class="v">PAID IN SOL</span><span class="to">&rarr; TOP 1 WITH A WALLET</span>';
+      else amt.innerHTML = '<span class="k">PRIZE</span><span class="v">SOL</span><span class="to">&rarr; TOP 1 WITH A WALLET</span>';
       amt.setAttribute('aria-label', on ? (p ? 'prize ' + sol(p) + ' sol to the top run of this round. rules' : 'rewards are live. rules') : 'prizes start at launch. rules');
       lead.classList.remove('me');
       if (down && !cur) lead.textContent = "round board's offline. runs still count.";
